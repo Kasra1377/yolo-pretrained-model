@@ -4,9 +4,9 @@
 
 ### 📄Description
 ---
-In this project our purpose is to use the YOLOv3 pre-trained model for detecting pre-specified objects in images/videos.YOLO algorithms are 'single-stage detectors'.As its name suggests, this type of algorithms detect objects without extracting `region proposals` by another model. So this algorithms have a high speed in terms of detecting objects and easily used for real-time object detection algorithms. Unlike two-stage detector algorithms(like `R-CNNs` , `Fast R-CNNs` and `Faster R-CNNs`, YOLO algorithms are not that accurate.In other words there is a trade-off between `speed` and `accuracy` in object detection algorithms.
+In this project our purpose is to use the YOLOv3 pre-trained model for detecting pre-specified objects in images/videos.YOLO algorithms are `single-stage detectors`. As its name suggests, this type of algorithms detect objects without extracting `region proposals` by another model and performing classification task on each and every regions. So this algorithms have a high speed in terms of detecting objects and it can be easily used for real-time object detection tasks. Unlike two-stage detector algorithms(like `R-CNNs` , `Fast R-CNNs` and `Faster R-CNNs`, YOLO algorithms are not that accurate. In other words there is a trade-off between `speed` and `accuracy` in object detection algorithms.
 
-Unlike most object detection algorithms, YOLO variants do not localize the object(s) in the image/video. Instead these algorithms split the input image into `SxS` grid. In each grid we have `m` number of bounding boxes and each bounding box returns a class probability and offset values,(offset values are defined for bounding boxes to fit the object more accurately. The bounding boxes that have the value that is higher than the threshold values, are kept to locate the object in the image. The below image shows the process of YOLO algorithms briefly.
+Unlike most object detection algorithms, YOLO variants do not localize the object(s) in the image/video. Instead these algorithms split the input image into `SxS` grid. In each grid we have `m` number of bounding boxes and each bounding box returns a class probability and offset values (offset values are defined for bounding boxes to fit the object more accurately). The bounding boxes that have the value higher than the threshold value, are kept to locate the object in the image. The below image shows the process of YOLO algorithms briefly.
 
 ![alt text](https://pyimagesearch.com/wp-content/uploads/2018/11/yolo_design.jpg)
 
@@ -14,12 +14,13 @@ Unlike most object detection algorithms, YOLO variants do not localize the objec
 
 ### 🛠Installation & Configuration
 ---
-In this specific project the third verion of YOLO algorithm was used. This version has higher mAP on COCO dataset and higher speed among other versions. In addition to that is already trained on the COCO dataset, so no training is required! 
+In this specific project the third verion of YOLO algorithm was used. This version has higher mAP on COCO dataset and higher speed among other versions. In addition to that YOLO was already trained on the COCO dataset, so no training is required! 
 To use the YOLO for object detection you need three component:
 * coco.names
 * yolov3.cfg
 * yolov3.weights
-the first two are availble at `yolo-coco` folder and you can access the last one in this [link](https://pjreddie.com/darknet/yolo/).
+
+the first two are availble at `yolo-coco` folder and you can access the last one via this [link](https://pjreddie.com/darknet/yolo/).
 The picture down below shows the YOLOv3 performace in terms of other object detection algorithms.
 ![alt text](https://pjreddie.com/media/image/map50blue.png)
 
@@ -30,15 +31,15 @@ The picture down below shows the YOLOv3 performace in terms of other object dete
 
 ### ❌Limitations
 ---
-YOLO models have some limitations and drawbacks. As mentioned one of them is their accuracy. YOLO models have less accuracy than two-staged models in such a way that the may detect some objects that have weak class probabilities. i.e this model may detects an SUV as a truck or detects a train as a bus. Small objects(especially if they represent as a group in image) may cause a problem for YOLOs in such a way that, the YOLO may not even detect them as objects. Because of that we may have lots of false negative in some situations.
+YOLO models have some limitations and drawbacks. As mentioned one of them is their accuracy. YOLO models have less accuracy than two-staged models in such a way that the may detect some objects that have weak class probabilities. i.e this model may detects an SUV as a truck or detects a train as a bus. Small objects(especially if they are present as a group in image) may cause a problem for YOLOs in such a way that, the YOLO may not even detect them as objects. Because of that we may have lots of false negative in some situations.
 
 ## 🛠Requirements
 ---
 | Module/Framework        | Version           |
 | ----------------------- |:-----------------:|
-| numpy                   | 2.4.1             |
-| cv2                     | 2.5.0             |
-| imutils                 | 0.22.2.post1      |
+| numpy                   | 1.19.5            |
+| cv2                     | 4.1.2             |
+| imutils                 | 0.5.4             |
 
 ### ❌Bugs & Issues
 ---
