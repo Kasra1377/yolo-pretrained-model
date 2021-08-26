@@ -35,6 +35,8 @@ YOLO models have some limitations and drawbacks. As mentioned one of them is the
 
 ## 🛠Requirements
 ---
+![](https://forthebadge.com/images/badges/made-with-python.svg)
+
 | Module/Framework        | Version           |
 | ----------------------- |:-----------------:|
 | numpy                   | 1.19.5            |
